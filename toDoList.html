@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+        <section class="to-do-list">
+    <div class="container ">
+        <div class="row">
+      <div class="col-lg-4">
+      <div class="box"> 
+        <h2 class="heading" draggable="true">ADD TASK</h2>
+        <div id="tasks" class="taskcard">
+
+        </div>
+        <button class="btn btn-primary" onclick="add()">+ Add Task</button>
+      </div>
+      </div>
+      <div class="col-lg-4">
+      <div class="box">
+        <h2>IN PROGRESS</h2>
+        <div id="tasks" class="taskcard">
+          
+        </div>
+        <button class="btn btn-primary">+ Add Task</button>
+      </div>
+      </div>
+      <div class="col-lg-4">
+      <div class="box">
+        <h2>COMPLETE </h2>
+        <div id="tasks" class="taskcard">
+          
+        </div>
+        <button class="btn btn-primary">+ Add Task</button>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+
+
+      
+        <div class="addtask" id="addform">
+          <form action="" onsubmit="return false;">
+              <div class="form-heading">
+                  <h2>Add Task</h2>
+                  <span onclick="cancel()" id="cancel"><i class='bx bx-x' style='color:rgba(0,0,0,0.51)'></i></span>
+              </div>
+              <Label>Task Title</Label>
+              <input type="text" class="form-control" id="title">
+              <label for="">Due Date</label>
+              <input type="date" class="form-control" id="date">
+              <label for="">Details</label><br>
+              <textarea name="" id="details" class="form-control" rows="4"></textarea>
+              <label for="">Priority</label>
+              <select name="" id="priority" class="form-control">
+                  <option value="Low" >Low</option>
+                  <option value="Medium" >Medium</option>
+                  <option value="High" >High</option>
+              </select>
+              <button type="submit" onclick="addTask()" class="btn btn-primary mt-3 w-100">+ Add Task</button>
+          </form>
+      </div>
+      <script src="script.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+</body>
+</html>
